@@ -102,6 +102,31 @@
       cursor: pointer;
     }
   </style>
+  <script>
+    async function sendToTelegram(event) {
+      event.preventDefault();
+      const name = event.target.elements[0].value;
+      const email = event.target.elements[1].value;
+      const message = event.target.elements[2].value;
+
+      const telegramToken = '7894865148:AAGaljxtE9IdC01T62bMWO9ONV6OvfWKK-A';
+      const chatId = '6736646934';
+      const text = `✉️ Новое сообщение с сайта:
+
+ Имя: ${name}
+ Email: ${email}
+✍️ Сообщение: ${message}`;
+
+      await fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: chatId, text: text })
+      });
+
+      alert('Сообщение отправлено!');
+      event.target.reset();
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -132,7 +157,7 @@
       <a href="mailto:you@example.com">you@example.com</a>
       <a href="https://t.me/yourhandle">@yourhandle в Telegram</a>
     </div>
-    <form>
+    <form onsubmit="sendToTelegram(event)">
       <input type="text" placeholder="Ваше имя" required />
       <input type="email" placeholder="Ваш email" required />
       <textarea rows="5" placeholder="Ваше сообщение"></textarea>
