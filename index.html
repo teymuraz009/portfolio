@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web-разработчик | Портфолио</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      line-height: 1.6;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: #1e293b;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 900;
+    }
+    header p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #94a3b8;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .projects {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .project {
+      background: #1e293b;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .project img {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .project h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .project p {
+      color: #cbd5e1;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1e293b;
+      color: #64748b;
+    }
+    .contact {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 1rem;
+      color: #0ea5e9;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    input, textarea {
+      padding: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      background: #334155;
+      color: white;
+      font-size: 1rem;
+    }
+    button {
+      padding: 1rem;
+      background: #0ea5e9;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Привет, я Web-разработчик</h1>
+    <p>Создаю стильные, адаптивные и быстрые сайты под ключ</p>
+  </header>
+  <section>
+    <h2>Мои проекты</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="https://via.placeholder.com/600x400.png?text=Fitness+Landing" alt="Fitness Landing Page">
+        <h3>Landing Page для фитнес-клуба</h3>
+        <p>Привлекательный лендинг с анимациями и формой записи на тренировку.</p>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/600x400.png?text=E-commerce+Site" alt="E-commerce Site">
+        <h3>Интернет-магазин электроники</h3>
+        <p>Современный e-commerce с фильтрами, корзиной и онлайн-оплатой.</p>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/600x400.png?text=Blog+Platform" alt="Blog Platform">
+        <h3>Блог-платформа для копирайтера</h3>
+        <p>Минималистичный блог с панелью администрирования и SEO-оптимизацией.</p>
+      </div>
+    </div>
+    <div class="contact">
+      <h2>Связаться со мной</h2>
+      <a href="mailto:you@example.com">you@example.com</a>
+      <a href="https://t.me/yourhandle">@yourhandle в Telegram</a>
+    </div>
+    <form>
+      <input type="text" placeholder="Ваше имя" required />
+      <input type="email" placeholder="Ваш email" required />
+      <textarea rows="5" placeholder="Ваше сообщение"></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+  <footer>
+    &copy; 2025 Web-разработчик. Все права защищены.
+  </footer>
+</body>
+</html>
